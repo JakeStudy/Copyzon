@@ -1,2 +1,57 @@
-<button>hello</button>
-<p>Paragraph of <button>hello</button> text.</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML CSS Review</title>
+    <style>
+        /* CSS Syntax
+        button = CSS Selector, CSS Style in bracket, CSS property, CSS value */
+        /* . means looking for class */
+        .red-button {
+          background-color: rgba(255, 0, 0, 0.6);
+          color: white;
+          border: none;
+        }
+
+        .yellow-button {
+          background-color: rgb(254, 170, 42);
+          color: white;
+        }
+    </style>
+  </head>
+
+  <body>
+
+  <!-- class attribute labels an element. -->
+    <button title="tooltip" class="red-button"
+    onclick="
+    alert('Good Job');
+    ">
+    hello
+    </button>
+
+    <p>
+      Paragraph of <button class="yellow-button">hello</button>.
+    </p>
+
+    <script>
+      // This is a single line comment.
+      // This code creates a popup.
+      //alert('hello'); commenting out the code
+      
+      /*this is a multi line comment.
+      Multi lines*/
+
+      //works for any code that we learn so far
+      console.log(2 + 2);
+      console.log('some' + 'text');
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
