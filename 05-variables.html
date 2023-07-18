@@ -8,17 +8,19 @@
     <script>
       //let creates variables. 
       //can't use special word: let. can't start with number, can't use most special characters. $ _ are allowed.
+      //variable gonna change soon.
       let variable1 =  3;
       console.log(variable1);
 
-      let calculation = 2+2;
+      //variable gonna stay once changes are done.
+      const calculation = 2+2;
       console.log(calculation);
       console.log(calculation + 2);
 
-      let result = calculation + 2;
+      const result = calculation + 2;
       console.log(result);
 
-      let message = 'hello';
+      const message = 'hello';
       console.log(message); console.log(';');
 
       variable1 = 5;
@@ -26,6 +28,12 @@
 
       variable1 = variable1 + 1;
       console.log(variable1);
+
+      const variable2 = 3;
+      var variable3 = 3;
+
+      console.log(typeof 3);
+      console.log(typeof message);
     </script>
   </body>
 </html>
