@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      /*
+      const product = {
+        //property value pairs.
+        name: "Water",
+        price: "$02.11",
+      };
+      /*     //.(dot) notation.
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      product.name = "gasoline";
+      product.price = "$05.99";
+      console.log(product.name);
+      console.log(product.price);
+
+      product.name = "Coffee";
+      product.price = "$09.99";
+      console.log(product.name);
+      console.log(product.price);
+
+      product.newProperty = true;
+      console.log(product);
+
+      //removes value from objects
+      delete product.newProperty;
+      console.log(product);
+*/
+      /*
+      const product2 = {
+        name: "shirt",
+        "delivery-time": "1 day",
+        //object within object allowed
+        rating: {
+          stars: 4.5,
+          count: 22,
+        },
+        fun: function function1() {
+          console.log("function inside object");
+        },
+      };
+
+      console.log(product2);
+      console.log(product2.name);
+      //bracket notation.
+      console.log(product2["name"]);
+      console.log(product2["delivery-time"]);
+
+      //this will get count
+      console.log(product2.rating.count);
+      product2.fun();
+      //we can call function from object.
+      //we've been actually using method and objects all long.
+
+      console.log(typeof console.log);
+
+      //Built-in Json Objecct
+
+      // "Method" of Jason Object. Ready to be sent to another computer.
+      // We use JSON when we send data between computers.
+      // we also ue JSON when we store data.
+      console.log(JSON.stringify(product2));
+
+      const jsonString = JSON.stringify(product2);
+      console.log(JSON.parse(jsonString));
+
+      console.log(JSON.parse(JSON.stringify(product2)));
+      */
+
+      //---------------------------------------------------
+      //Showcase of javascript AUTO-BOXING. Other values also have property and method.
+      console.log("hello".length);
+      console.log("hello".toUpperCase());
+      console.log("what's up".toLowerCase());
+      console.log("Auto-Boxing");
+      //---------------------------------------------------
+      //objects are REFERENCES. objects are somewhere else in the memory. it's to make computer more efficient.
+      const object1 = {
+        message: "hello",
+      };
+      //Copy by reference. Object1 and Object2 points to the same memory address.
+      const object2 = object1;
+
+      object1.message = "good job!";
+      console.log(object1);
+      console.log(object2);
+
+      //we can't compare objects directly.
+      const object3 = {
+        message: "good job!",
+      };
+
+      //First line compares references. Not the same.
+      console.log(object3 === object1);
+      //Second Line compares references. The same.
+      console.log(object1 === object2);
+      //Second Line compares properties.
+      console.log(object3.message === object1.message);
+
+      //SHORTCUT Show Case -----------------------
+      const object4 = {
+        message: "good job!",
+        price: "$7.99",
+      };
+      // equals to const message = object4.message;
+      const { message, price } = object4;
+      console.log(message);
+      console.log(price);
+      //-------------------------------------------
+
+      //Shorthand Property & Method -----------------------
+      const object5 = {
+        //Equals to message: message,
+        message,
+        //method: function function1() {
+        //  console.log("method");}
+        //Shorthand Method
+        method() {
+          console.log("method");
+        },
+      };
+
+      object5.method();
+      //---------------------------------------------
+    </script>
+  </body>
+</html>
