@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style></style>
+    <title>11n</title>
+  </head>
+  <body>
+    <script>
+      function countWords(words) {
+        const result = {};
+
+        for (i = 0; i < words.length; i++) {
+          const currentWord = words[i];
+          console.log(`current index : ${i} Current Word: ${currentWord}}`);
+          console.info(result[currentWord]);
+
+          if (!result[currentWord]) {
+            result[currentWord] = 1;
+          } else {
+            result[currentWord]++;
+          }
+          console.info(`After Loop : ${result[currentWord]}`);
+        }
+
+        return result;
+      }
+      console.log(countWords(["apple", "grape", "apple", "apple"]));
+    </script>
+  </body>
+</html>
